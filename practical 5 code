@@ -1,0 +1,151 @@
+//practical 5b
+//About.jsx:
+function About(){
+    return(
+        <div> <h1> About Page</h1>
+        <p> This page contains information about our application .</p>
+        </div>
+    );
+}export default About;
+
+//Home.jsx:
+function Home(){
+    return(
+        <div> <h1> Home Page</h1>
+        <p> Welcome to our React Application.</p>
+
+        </div>
+    );
+}export default Home;
+
+//Contact.jsx:
+function Contact(){
+    return(
+        <div> <h1> Contact Page</h1>
+        <p>Email:afshamujawar0206@gmail.com</p>
+        </div>
+    );
+}export default Contact;
+
+//App.jsx:
+
+import {BrowserRouter,Routes,Route,Link} from"react-router-dom";
+
+import Home from"./pages/Home";
+import About from"./pages/About";
+import Contact from"./pages/Contact";
+
+function App() {
+  return(
+    <BrowserRouter>
+    <h1>My React Application</h1>
+    <nav>
+      <Link to="/">Home</Link>
+      <br/>
+      <Link to="/about">About</Link>
+      <br/>
+      <Link to="/contact">Contact</Link>
+    </nav>
+    <hr/>
+    <Routes>
+      <Route path="/"element={<Home/>}/>
+      <Route path="/about"element={<About/>}/>
+      <Route path="/contact"element={<Contact/>}/>
+    </Routes>
+    </BrowserRouter>
+  );
+}
+export default App;
+//practical 5c:
+//Dashboard.jsx:
+function Dashboard(){
+    return(
+        <div>
+            <h1>Placement Dashboard</h1>
+            <p>Welcome to the Student Placement Portal.</p>
+            <hr/>
+            <h2>Placement Summary</h2>
+            <p>Total Companies: 25</p>
+            <p>Students Placed: 120</p>
+            <p>Highest Packages: ₹12</p>
+         </div>
+    );
+}export default Dashboard;
+Profile.jsx
+function Profile(){
+    return(
+        <div>
+            <h1>Student Profile</h1>
+            <hr/>
+            <p>Name: Afsha Amjad Mujawar</p>
+            <p>Course: B.Sc.IT</p>
+            <p>CGPA: 8.59</p>
+            <p>Skills: JavaScript,React,Node.js</p>
+        </div>
+    );
+}export default Profile;
+
+//Job.jsx                                               
+function Job(){
+    return(
+        <div>
+            <h1>Job Opportunities</h1>
+            <hr/>
+            <h2>Software Developer</h2>
+            <p>Company: AM Technologies</p>
+            <p>Packages: ₹6 LPA</p>
+            <hr/>
+            <h2>Web Developer</h2>
+            <p>Company: AK Solution</p>
+            <p>Packages: ₹5 LPA</p>
+        </div>
+    );
+}export default Job;
+
+//Statistics.jsx
+function Statistics(){
+    return(
+        <div>
+            <h1>Placement Statistics</h1>
+            <hr/>
+            <h2>Student Registered: 200</h2>
+            <p>Student Placed: 120</p>
+            <p>Placement Percentage: 60%</p>
+            <p>Average Package: ₹5.5 LPA</p>
+         </div>
+    );
+}export default Statistics;
+//App.jsx:
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import Dashboard from "./Pages/Dashboard";
+import Profile from "./Pages/Profile";
+import Job from "./Pages/Job";
+import Statistics from "./Pages/Statistics";
+function App() {
+  return (
+    <BrowserRouter>
+      <h1>M.V.L.U College Dashboard</h1>
+
+      <nav>
+        <Link to="/">Dashboard</Link>
+        <br />
+        <Link to="/Profile">Profile</Link>
+        <br />
+        <Link to="/Job">Job</Link>
+        <br />
+        <Link to="/Statistics">Statistics</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Job" element={<Job/>} />
+        <Route path="/Statistics" element={<Statistics />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+export default App;
+
+
+
