@@ -1,0 +1,39 @@
+//Practical 4E
+//App.jsx:
+import { useState } from "react";
+function App() {
+  const [movies, setMovies] = useState([
+    {
+      name: "3 Idiots",
+      genre: "Comedy",
+      rating: 8.4
+    },
+    {
+      name: "Dangal",
+      genre: "Sports",
+      rating: 8.3
+    },
+    {
+      name: "Zindagi Na Milegi Dobara",
+      genre: "Drama",
+      rating: 8.2
+    },
+    {
+      name: "Taare Zameen Par",
+      genre: "Drama",
+      rating: 8.3 }
+  ]);
+  return (
+    <div>
+      <h1>Movie Watchlist</h1>
+      {movies.map((movie) => (
+        <div key={movie.name}>
+          <h2>Movie Name: {movie.name}</h2>
+          <p>Genre: {movie.genre}</p>
+          <p>Rating: {movie.rating}</p>
+          <hr />
+        </div>
+      ))}
+    </div>
+  );
+}export default App;
